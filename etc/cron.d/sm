@@ -1,0 +1,3 @@
+# This cron setting will execute the script every minute.
+# Do not forget to provide the command "sudo service cron reload"
+* * * * * pi bash /home/pi/sm/sm-check.sh
