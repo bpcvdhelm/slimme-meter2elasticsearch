@@ -1,0 +1,259 @@
+PUT _template/sm
+{
+  "order": 0,
+  "index_patterns": [
+    "sm-*"
+  ],
+  "settings": {},
+  "mappings": {
+    "doc": {
+      "properties": {
+        "CreateTimestamp": {
+          "type": "date"
+        },
+        "GasTake.m3.avg": {
+          "type": "float"
+        },
+        "GasTake.m3.max": {
+          "type": "float"
+        },
+        "GasTake.m3.min": {
+          "type": "float"
+        },
+        "GasTake.m3.use": {
+          "type": "float"
+        },
+        "GasTimestamp.max": {
+          "type": "date",
+          "format": "YYMMddHHmmssZ"
+        },
+        "GasTimestamp.min": {
+          "type": "date",
+          "format": "YYMMddHHmmssZ"
+        },
+        "Measurements": {
+          "type": "integer"
+        },
+        "Pwr.kWh.use": {
+          "type": "float"
+        },
+        "Pwr.A.avg": {
+          "type": "float"
+        },
+        "Pwr.A.max": {
+          "type": "float"
+        },
+        "Pwr.A.min": {
+          "type": "float"
+        },
+        "Pwr.V.avg": {
+          "type": "float"
+        },
+        "Pwr.V.max": {
+          "type": "float"
+        },
+        "Pwr.V.min": {
+          "type": "float"
+        },
+        "PwrGive.kW.avg": {
+          "type": "float"
+        },
+        "PwrGive.kW.max": {
+          "type": "float"
+        },
+        "PwrGive.kW.min": {
+          "type": "float"
+        },
+        "PwrL1.A.avg": {
+          "type": "float"
+        },
+        "PwrL1.A.max": {
+          "type": "float"
+        },
+        "PwrL1.A.min": {
+          "type": "float"
+        },
+        "PwrL1.V.avg": {
+          "type": "float"
+        },
+        "PwrL1.V.max": {
+          "type": "float"
+        },
+        "PwrL1.V.min": {
+          "type": "float"
+        },
+        "PwrL1Give.kW.avg": {
+          "type": "float"
+        },
+        "PwrL1Give.kW.max": {
+          "type": "float"
+        },
+        "PwrL1Give.kW.min": {
+          "type": "float"
+        },
+        "PwrL1Take.kW.avg": {
+          "type": "float"
+        },
+        "PwrL1Take.kW.max": {
+          "type": "float"
+        },
+        "PwrL1Take.kW.min": {
+          "type": "float"
+        },
+        "PwrL2.A.avg": {
+          "type": "float"
+        },
+        "PwrL2.A.max": {
+          "type": "float"
+        },
+        "PwrL2.A.min": {
+          "type": "float"
+        },
+        "PwrL2.V.avg": {
+          "type": "float"
+        },
+        "PwrL2.V.max": {
+          "type": "float"
+        },
+        "PwrL2.V.min": {
+          "type": "float"
+        },
+        "PwrL2Give.kW.avg": {
+          "type": "float"
+        },
+        "PwrL2Give.kW.max": {
+          "type": "float"
+        },
+        "PwrL2Give.kW.min": {
+          "type": "float"
+        },
+        "PwrL2Take.kW.avg": {
+          "type": "float"
+        },
+        "PwrL2Take.kW.max": {
+          "type": "float"
+        },
+        "PwrL2Take.kW.min": {
+          "type": "float"
+        },
+        "PwrL3.A.avg": {
+          "type": "float"
+        },
+        "PwrL3.A.max": {
+          "type": "float"
+        },
+        "PwrL3.A.min": {
+          "type": "float"
+        },
+        "PwrL3.V.avg": {
+          "type": "float"
+        },
+        "PwrL3.V.max": {
+          "type": "float"
+        },
+        "PwrL3.V.min": {
+          "type": "float"
+        },
+        "PwrL3Give.kW.avg": {
+          "type": "float"
+        },
+        "PwrL3Give.kW.max": {
+          "type": "float"
+        },
+        "PwrL3Give.kW.min": {
+          "type": "float"
+        },
+        "PwrL3Take.kW.avg": {
+          "type": "float"
+        },
+        "PwrL3Take.kW.max": {
+          "type": "float"
+        },
+        "PwrL3Take.kW.min": {
+          "type": "float"
+        },
+        "PwrT1.kWh.use": {
+          "type": "float"
+        },
+        "PwrT1Give.kWh.avg": {
+          "type": "float"
+        },
+        "PwrT1Give.kWh.max": {
+          "type": "float"
+        },
+        "PwrT1Give.kWh.min": {
+          "type": "float"
+        },
+        "PwrT1Give.kWh.use": {
+          "type": "float"
+        },
+        "PwrT1Take.kWh.avg": {
+          "type": "float"
+        },
+        "PwrT1Take.kWh.max": {
+          "type": "float"
+        },
+        "PwrT1Take.kWh.min": {
+          "type": "float"
+        },
+        "PwrT1Take.kWh.use": {
+          "type": "float"
+        },
+        "PwrT2.kWh.use": {
+          "type": "float"
+        },
+        "PwrT2Give.kWh.avg": {
+          "type": "float"
+        },
+        "PwrT2Give.kWh.max": {
+          "type": "float"
+        },
+        "PwrT2Give.kWh.min": {
+          "type": "float"
+        },
+        "PwrT2Give.kWh.use": {
+          "type": "float"
+        },
+        "PwrT2Take.kWh.avg": {
+          "type": "float"
+        },
+        "PwrT2Take.kWh.max": {
+          "type": "float"
+        },
+        "PwrT2Take.kWh.min": {
+          "type": "float"
+        },
+        "PwrT2Take.kWh.use": {
+          "type": "float"
+        },
+        "PwrTake.kW.avg": {
+          "type": "float"
+        },
+        "PwrTake.kW.max": {
+          "type": "float"
+        },
+        "PwrTake.kW.min": {
+          "type": "float"
+        },
+        "PwrTariff.avg": {
+          "type": "float"
+        },
+        "PwrTariff.max": {
+          "type": "float"
+        },
+        "PwrTariff.min": {
+          "type": "float"
+        },
+        "Timestamp.max": {
+          "type": "date",
+          "format": "YYMMddHHmmssZ"
+        },
+        "Timestamp.min": {
+          "type": "date",
+          "format": "YYMMddHHmmssZ"
+        }
+      }
+    }
+  },
+  "aliases": {}
+}
