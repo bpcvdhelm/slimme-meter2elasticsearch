@@ -1,2 +1,2 @@
-# slimme-meter2elasticsearch
-Dutch "Slimme" meter to Elasticsearch
+#slimme-meter2elasticsearch
+##Setup
