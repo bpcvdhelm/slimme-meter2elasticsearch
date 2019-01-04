@@ -92,6 +92,8 @@ The reported fields are:
   - "PwrTariff.min": 2
   - "Timestamp.max": "190104083459+0100"
   - "Timestamp.min": "190104083000+0100"
+  
+You can see I have a meter with 2 tarrifs and I'm having Solar panels. I provide (Give) energy to the grid.
 
 All used keys have a dimension and a type average (avg), maximum (max), minimum (min) and the usage (use = max - min). These are measured during the interval Timestamp.min and Timestamp.max. The number of Measurements is in my case 300 or 299. So every now and then I miss one second measurement. I still need to figure out why.
 
