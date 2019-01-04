@@ -12,13 +12,13 @@ The sm (Slimme meter, what else ;-) example is just the cron setting for startin
 The python script will start reading from the slimme meter. It will pull out the telegrams every second. When the CRC is correct statistics will be kept for 5 minutes. On every 5 minute interval (based on the time the slimme meter provides) 2 jsons are added to a zipped _bulk elasticsearch file named <year>.<month>.gz. Example "2019.01.gz".
 
 The reported fields are:
-  - "CreateTimestamp": - "2019-01-04T07:34:58Z"
+  - "CreateTimestamp": "2019-01-04T07:34:58Z"
   - "GasTake.m3.avg": 818.05
   - "GasTake.m3.max": 818.051
   - "GasTake.m3.min": 817.985
   - "GasTake.m3.use": 0.066
-  - "GasTimestamp.max": - "190104083002+0100"
-  - "GasTimestamp.min": - "190104082509+0100"
+  - "GasTimestamp.max": "190104083002+0100"
+  - "GasTimestamp.min": "190104082509+0100"
   - "Measurements": 300
   - "Pwr.A.avg": 0.089
   - "Pwr.A.max": 6
@@ -90,8 +90,8 @@ The reported fields are:
   - "PwrTariff.avg": 2
   - "PwrTariff.max": 2
   - "PwrTariff.min": 2
-  - "Timestamp.max": - "190104083459+0100"
-  - "Timestamp.min": - "190104083000+0100"
+  - "Timestamp.max": "190104083459+0100"
+  - "Timestamp.min": "190104083000+0100"
 
 All used keys have a dimension and a type average (avg), maximum (max) and minimum (min). These are measured during the interval Timestamp.min and Timestamp.max. The number of Measurements is in my case 300 or 299. So every now and then I miss one second measurement. I still need to figure out why.
 
