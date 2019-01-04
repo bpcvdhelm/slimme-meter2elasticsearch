@@ -1,6 +1,6 @@
 # slimme-meter2elasticsearch
 ## Hardware setup
-I've implemented a Pi Zero connected to an ISKRA meter type AM550-TD2.01. It is just a Pi Zero W with housing, a 16Gb microSD, an adapter, a "Slimme meter" cable and a USB cable micro-USB tto USB-A female.
+I've implemented a Pi Zero connected to an ISKRA meter type AM550-TD2.01. It is just a Pi Zero W with housing, a 16Gb microSD, an adapter, a "Slimme meter" cable and an USB cable micro-USB tto USB-A female.
 
 ## Implementation
 Cron is running a script sm-check.sh every minute on the Pi Zero W. It has the simple task of starting the python script sm.py if it is not running. The sm.py will take arround 35% of the single cpu within the Pi Zero.
