@@ -98,4 +98,5 @@ All used keys have a dimension and a type average (avg), maximum (max) and minim
 In any case the measurements are accurate enough for me.
 
 ## Upload to Elasticsearch
-I'm using the brute script sm-collect.sh on the machine with elasticsearch. It just copies all zipped files in the directory /home/pi/sm/json and bulks these into elasticsearch. I will need to work on a more refined model.
+First create the template in Elasticsearch, use the elastic.template instruction in your Kibana console.
+For uploading I'm using the brute script sm-collect.sh on the machine with elasticsearch. It just copies all zipped files in the directory /home/pi/sm/json and bulks these into elasticsearch. I will need to work on a more refined model.
