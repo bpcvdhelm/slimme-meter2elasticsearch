@@ -3,7 +3,7 @@
 I've implemented a Pi Zero connected to an ISKRA meter type AM550-TD2.01. It is just a Pi Zero W with housing, a 16Gb microSD, an adapter, a "Slimme meter" cable and a USB cable micro-USB tto USB-A female.
 
 ## Implementation
-Cron is running a script sm-check.sh every minute on the Pi Zero W. It has the simple task of starting the python script sm.py if it is not running.
+Cron is running a script sm-check.sh every minute on the Pi Zero W. It has the simple task of starting the python script sm.py if it is not running. The sm.py will take arround 35% of the single cpu within the Pi Zero.
 
 ### sm
 The sm (Slimme meter, what else ;-) example is just the cron setting for starting up the sm.py script. Do not forget to load it into cron with the command (under root) service cron reload. This should start the whole thing up.
@@ -96,3 +96,6 @@ The reported fields are:
 All used keys have a dimension and a type average (avg), maximum (max) and minimum (min). These are measured during the interval Timestamp.min and Timestamp.max. The number of Measurements is in my case 300 or 299. So every now and then I miss one second measurement. I still need to figure out why.
 
 In any case the measurements are accurate enough for me.
+
+## Upload to Elasticsearch
+I'm using the brute script sm-collect.sh on the machine with elasticsearch. It just copies all zipped files in the directory /home/pi/sm/json and bulks these into elasticsearch. I will need to work on a more refined model.
