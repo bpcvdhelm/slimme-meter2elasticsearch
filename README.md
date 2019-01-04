@@ -14,6 +14,7 @@ The python script will start reading from the slimme meter. It will pull out the
 Here is an example output:
 
 {"index":{"_index":"sm-2019.01","_type":"doc","_id":"2019-01-04T07:14:59Z"}}
+
 {"PwrL1.A.avg":0.22, ... ,"PwrL2.A.max":6.0}
 
 The variables in the Json are:
